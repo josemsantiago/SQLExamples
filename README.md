@@ -1,12 +1,11 @@
-# SQL Mastery Examples
-### Comprehensive SQL and Transact-SQL Reference & Portfolio
+# SQL Learning Examples
+### SQL and Transact-SQL Practice Repository
 
-[![SQL](https://img.shields.io/badge/SQL-Advanced-blue.svg)](https://www.w3schools.com/sql/)
-[![T-SQL](https://img.shields.io/badge/T--SQL-Expert-red.svg)](https://docs.microsoft.com/en-us/sql/t-sql/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Professional-lightblue.svg)](https://postgresql.org)
+[![SQL](https://img.shields.io/badge/SQL-Learning-blue.svg)](https://www.w3schools.com/sql/)
+[![T-SQL](https://img.shields.io/badge/T--SQL-In_Progress-orange.svg)](https://docs.microsoft.com/en-us/sql/t-sql/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A comprehensive collection of SQL examples demonstrating mastery from basic queries to advanced database programming, including extensive Transact-SQL features, performance optimization, and enterprise-level database solutions.
+A growing collection of SQL examples for learning and practice, focusing on the Museum of Modern Art (MoMA) dataset and fundamental SQL concepts.
 
 ## 📚 **Table of Contents**
 
@@ -22,352 +21,229 @@ A comprehensive collection of SQL examples demonstrating mastery from basic quer
 
 ## 🎯 **Overview**
 
-This repository demonstrates comprehensive SQL expertise through practical examples covering:
+This repository contains SQL learning exercises and examples, primarily working with the Museum of Modern Art (MoMA) dataset. It includes basic queries, data visualization scripts, and foundational SQL concepts.
 
-### **Skill Coverage Matrix**
-| Category | Basic | Intermediate | Advanced | Expert |
-|----------|-------|--------------|----------|--------|
-| **Queries** | ✅ SELECT, WHERE, ORDER BY | ✅ JOINs, Subqueries | ✅ CTEs, Window Functions | ✅ Recursive Queries |
-| **Data Manipulation** | ✅ INSERT, UPDATE, DELETE | ✅ MERGE, UPSERT | ✅ Bulk Operations | ✅ Transaction Control |
-| **Database Design** | ✅ Tables, Constraints | ✅ Indexes, Views | ✅ Triggers, Procedures | ✅ Partitioning |
-| **T-SQL Programming** | ✅ Variables, Conditions | ✅ Loops, Error Handling | ✅ Dynamic SQL | ✅ CLR Integration |
-| **Performance** | ✅ Basic Indexing | ✅ Execution Plans | ✅ Query Optimization | ✅ Advanced Tuning |
+### **Current Implementation Status**
+
+| Category | Status | Files |
+|----------|--------|-------|
+| **Basic Queries** | ✅ Implemented | `queries.sql`, `01_fundamentals/basic_queries.sql` |
+| **Data Mutations** | ✅ Implemented | `mutations.sql` |
+| **MoMA Visualization** | ✅ Implemented | `moma_viz.sql`, `moma_viz.py`, `moma_viz.ipynb` |
+| **Schema Creation** | ✅ Implemented | `ShemaCreation.sql` |
+| **Advanced Features** | 🚧 Planned | See roadmap below |
 
 ## 📊 **Database Schema**
 
-The examples use multiple database schemas including:
-
-### **Northwind Database** (Classic Business Schema)
-- **Products & Categories**: Product catalog management
-- **Customers & Orders**: Order processing system
-- **Employees & Territories**: Human resources data
-- **Suppliers & Shipping**: Supply chain management
-
 ### **Museum of Modern Art (MoMA) Dataset**
-- **Artworks**: Comprehensive art collection data
-- **Artists**: Artist biographical information
-- **Exhibitions**: Exhibition and curation data
+The primary dataset used in this project:
+- **Artworks**: Art collection data including titles, dates, mediums
+- **Artists**: Artist information and biographical data
+- Schema creation script: `ShemaCreation.sql`
 
-### **Custom Enterprise Schemas**
-- **Financial System**: Banking and transaction processing
-- **E-commerce Platform**: Online retail operations
-- **Social Media Analytics**: User engagement metrics
-
-## 🔧 **File Structure**
+## 🔧 **Current File Structure**
 
 ```
 SQLExamples/
+├── queries.sql                    # Main MoMA dataset queries
+├── mutations.sql                  # Data modification examples
+├── momaviz.sql                    # Large MoMA visualization dataset
+├── moma_viz.py                    # Python visualization script
+├── moma_viz.ipynb                 # Jupyter notebook for visualizations
+├── ShemaCreation.sql              # Database schema setup
 ├── 01_fundamentals/
-│   ├── basic_queries.sql           # SELECT, WHERE, ORDER BY
-│   ├── data_types.sql              # All SQL data types
-│   ├── operators.sql               # Arithmetic, logical, comparison
-│   └── string_functions.sql        # Text manipulation functions
-├── 02_intermediate/
-│   ├── joins_comprehensive.sql     # All JOIN types with examples
-│   ├── subqueries_correlated.sql   # Nested and correlated subqueries
-│   ├── aggregate_grouping.sql      # GROUP BY, HAVING, aggregates
-│   └── date_time_functions.sql     # Date/time manipulation
-├── 03_advanced/
-│   ├── window_functions.sql        # ROW_NUMBER, RANK, LAG/LEAD
-│   ├── common_table_expressions.sql # CTEs and recursive queries
-│   ├── pivot_unpivot.sql          # Data transformation
-│   └── advanced_analytics.sql      # Statistical functions
-├── 04_tsql_programming/
-│   ├── variables_control_flow.sql  # T-SQL programming constructs
-│   ├── stored_procedures.sql       # Procedure development
-│   ├── functions_udfs.sql          # User-defined functions
-│   ├── triggers_advanced.sql       # Trigger programming
-│   ├── error_handling.sql          # TRY/CATCH, transactions
-│   └── dynamic_sql.sql             # Dynamic query generation
-├── 05_performance/
-│   ├── indexing_strategies.sql     # Index design and optimization
-│   ├── execution_plans.sql         # Query plan analysis
-│   ├── query_optimization.sql      # Performance tuning
-│   └── statistics_maintenance.sql  # Statistics and maintenance
-├── 06_enterprise/
-│   ├── partitioning.sql           # Table and index partitioning
-│   ├── security_permissions.sql    # Security and access control
-│   ├── backup_recovery.sql         # Backup and recovery strategies
-│   └── high_availability.sql       # HA and disaster recovery
-├── 07_data_analysis/
-│   ├── moma_analysis.sql          # Museum data analysis
-│   ├── business_intelligence.sql   # BI queries and reporting
-│   ├── time_series_analysis.sql    # Temporal data analysis
-│   └── statistical_analysis.sql    # Advanced statistics
-├── 08_real_world_scenarios/
-│   ├── ecommerce_queries.sql      # E-commerce use cases
-│   ├── financial_reporting.sql     # Financial analysis
-│   ├── social_media_analytics.sql  # Social analytics
-│   └── inventory_management.sql    # Supply chain queries
-└── schemas/
-    ├── northwind_schema.sql        # Northwind database setup
-    ├── moma_schema.sql            # MoMA database setup
-    ├── enterprise_schemas.sql      # Custom business schemas
-    └── sample_data.sql            # Test data generation
+│   └── basic_queries.sql          # Fundamental SQL queries
+├── 02_intermediate/               # (empty - planned)
+├── 03_advanced/                   # (empty - planned)
+├── 04_tsql_programming/           # (empty - planned)
+├── 05_performance/                # (empty - planned)
+├── 06_enterprise/                 # (empty - planned)
+├── 07_data_analysis/              # (empty - planned)
+├── 08_real_world_scenarios/       # (empty - planned)
+└── schemas/                       # (empty - planned)
 ```
 
-## 🚀 **Featured Examples**
+## 🚀 **What's Implemented**
 
-### **1. Advanced Window Functions**
-```sql
--- Customer order analysis with multiple window functions
-SELECT
-    customer_id,
-    order_date,
-    order_amount,
-    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) as order_sequence,
-    LAG(order_amount) OVER (PARTITION BY customer_id ORDER BY order_date) as previous_order,
-    LEAD(order_date) OVER (PARTITION BY customer_id ORDER BY order_date) as next_order_date,
-    SUM(order_amount) OVER (PARTITION BY customer_id ORDER BY order_date
-                           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as running_total,
-    AVG(order_amount) OVER (PARTITION BY customer_id ORDER BY order_date
-                           ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING) as moving_avg
-FROM orders
-ORDER BY customer_id, order_date;
-```
+### **MoMA Dataset Analysis**
+- Basic SELECT queries for artwork exploration
+- Data mutation examples (INSERT, UPDATE, DELETE)
+- Python-based data visualization
+- Jupyter notebook for interactive analysis
 
-### **2. Recursive Common Table Expression**
-```sql
--- Organizational hierarchy traversal
-WITH EmployeeHierarchy AS (
-    -- Anchor: Top-level managers
-    SELECT employee_id, manager_id, first_name, last_name, 0 as level,
-           CAST(first_name + ' ' + last_name AS VARCHAR(MAX)) as hierarchy_path
-    FROM employees
-    WHERE manager_id IS NULL
+### **Fundamentals**
+- Basic query patterns in `01_fundamentals/basic_queries.sql`
+- Schema creation and setup
 
-    UNION ALL
+## 📋 **Planned Future Content**
 
-    -- Recursive: Direct reports
-    SELECT e.employee_id, e.manager_id, e.first_name, e.last_name,
-           eh.level + 1,
-           eh.hierarchy_path + ' -> ' + e.first_name + ' ' + e.last_name
-    FROM employees e
-    INNER JOIN EmployeeHierarchy eh ON e.manager_id = eh.employee_id
-)
-SELECT * FROM EmployeeHierarchy ORDER BY level, hierarchy_path;
-```
+The following directories are placeholders for future learning:
 
-### **3. Advanced T-SQL Procedure with Error Handling**
-```sql
-CREATE PROCEDURE ProcessOrderBatch
-    @BatchSize INT = 100,
-    @ProcessDate DATE = NULL
-AS
-BEGIN
-    SET NOCOUNT ON;
-    DECLARE @ErrorMessage NVARCHAR(4000);
-    DECLARE @ProcessedCount INT = 0;
+### **Intermediate SQL** (02_intermediate/)
+- JOIN operations
+- Subqueries and CTEs
+- Aggregate functions
+- Date/time manipulation
 
-    BEGIN TRY
-        BEGIN TRANSACTION;
+### **Advanced SQL** (03_advanced/)
+- Window functions
+- Recursive queries
+- PIVOT/UNPIVOT operations
 
-        -- Complex business logic with multiple operations
-        WITH OrdersToProcess AS (
-            SELECT TOP(@BatchSize) order_id, customer_id, order_amount
-            FROM orders
-            WHERE process_date = ISNULL(@ProcessDate, CAST(GETDATE() AS DATE))
-              AND status = 'PENDING'
-        )
-        UPDATE o SET
-            status = 'PROCESSED',
-            processed_date = GETDATE()
-        FROM orders o
-        INNER JOIN OrdersToProcess otp ON o.order_id = otp.order_id;
+### **T-SQL Programming** (04_tsql_programming/)
+- Stored procedures
+- Functions
+- Triggers
+- Error handling
 
-        SET @ProcessedCount = @@ROWCOUNT;
-
-        -- Audit logging
-        INSERT INTO process_log (process_type, records_affected, process_date)
-        VALUES ('ORDER_BATCH', @ProcessedCount, GETDATE());
-
-        COMMIT TRANSACTION;
-
-        PRINT 'Successfully processed ' + CAST(@ProcessedCount AS VARCHAR) + ' orders.';
-
-    END TRY
-    BEGIN CATCH
-        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
-
-        SET @ErrorMessage =
-            'Error Number: ' + CAST(ERROR_NUMBER() AS VARCHAR) + CHAR(13) +
-            'Error Message: ' + ERROR_MESSAGE() + CHAR(13) +
-            'Error Line: ' + CAST(ERROR_LINE() AS VARCHAR);
-
-        INSERT INTO error_log (error_message, error_date, procedure_name)
-        VALUES (@ErrorMessage, GETDATE(), 'ProcessOrderBatch');
-
-        THROW;
-    END CATCH
-END
-```
-
-## 📈 **Performance Optimization Examples**
-
-### **Query Optimization Techniques**
-- Index strategy recommendations
+### **Performance** (05_performance/)
+- Indexing strategies
+- Query optimization
 - Execution plan analysis
-- Statistics maintenance
-- Query rewriting patterns
-- Partitioning strategies
 
-### **Advanced Indexing**
-- Clustered vs Non-clustered indexes
-- Covering indexes
-- Filtered indexes
-- Columnstore indexes
-- Full-text search indexes
+### **Enterprise Features** (06_enterprise/)
+- Security implementations
+- Backup/recovery
+- High availability patterns
 
-## 🔒 **Enterprise Features**
+### **Data Analysis** (07_data_analysis/)
+- Business intelligence queries
+- Statistical analysis
+- Reporting patterns
 
-### **Security & Permissions**
-- Row-level security implementation
-- Dynamic data masking
-- Transparent data encryption
-- Custom security predicates
-
-### **High Availability**
-- Always On Availability Groups
-- Database mirroring
-- Log shipping configurations
-- Backup and recovery strategies
-
-## 📊 **Business Intelligence Examples**
-
-### **Data Warehousing Patterns**
-- Star and snowflake schemas
-- Slowly changing dimensions
-- Fact table design patterns
-- ETL process examples
-
-### **Analytical Queries**
-- Sales trend analysis
-- Customer segmentation
-- Cohort analysis
-- Time series forecasting
+### **Real-World Scenarios** (08_real_world_scenarios/)
+- E-commerce queries
+- Financial analysis
+- Application-specific patterns
 
 ## 🛠 **Setup Instructions**
 
 ### **Prerequisites**
-- SQL Server 2016+ (for T-SQL features)
-- PostgreSQL 12+ (for standard SQL examples)
-- SQL Server Management Studio or Azure Data Studio
-- Sample databases (scripts provided)
+- SQL Server or PostgreSQL
+- SQL Server Management Studio, Azure Data Studio, or similar SQL client
+- Python 3.x (for visualization scripts)
 
 ### **Database Setup**
 ```bash
-# 1. Create sample databases
-sqlcmd -S your_server -i schemas/northwind_schema.sql
-sqlcmd -S your_server -i schemas/moma_schema.sql
-sqlcmd -S your_server -i schemas/sample_data.sql
+# 1. Create the MoMA database schema
+sqlcmd -S your_server -i ShemaCreation.sql
 
-# 2. Run examples by category
-sqlcmd -S your_server -i 01_fundamentals/basic_queries.sql
+# 2. Load the MoMA dataset
+sqlcmd -S your_server -i momaviz.sql
+
+# 3. Try out the example queries
+sqlcmd -S your_server -i queries.sql
 ```
 
-### **Environment Configuration**
-```sql
--- Enable advanced T-SQL features
-EXEC sp_configure 'show advanced options', 1;
-RECONFIGURE;
-EXEC sp_configure 'clr enabled', 1;
-RECONFIGURE;
+### **Python Visualization**
+```bash
+# Install dependencies
+pip install matplotlib pandas sqlalchemy
+
+# Run visualization script
+python moma_viz.py
+
+# Or use Jupyter notebook
+jupyter notebook moma_viz.ipynb
 ```
 
-## 📚 **Learning Path**
+## 📚 **Learning Progress**
 
-### **Beginner Track** (Files 01_*)
-1. Basic queries and filtering
-2. Data types and operators
-3. String and date functions
-4. Simple joins
+### **Completed**
+- ✅ Basic SELECT queries
+- ✅ Data mutations (INSERT, UPDATE, DELETE)
+- ✅ Schema design fundamentals
+- ✅ Data visualization with Python
 
-### **Intermediate Track** (Files 02_*)
-1. Complex joins and subqueries
-2. Aggregate functions and grouping
-3. Date/time manipulation
-4. Data modification operations
+### **In Progress**
+- 🚧 Intermediate query techniques
+- 🚧 JOIN operations
+- 🚧 Aggregate functions
 
-### **Advanced Track** (Files 03_*)
-1. Window functions and analytics
-2. Common table expressions
-3. Pivot/unpivot operations
-4. Advanced data analysis
+### **Planned**
+- 📋 Window functions
+- 📋 Stored procedures
+- 📋 Performance optimization
+- 📋 Advanced T-SQL features
 
-### **Expert Track** (Files 04_* - 08_*)
-1. T-SQL programming constructs
-2. Performance optimization
-3. Enterprise features
-4. Real-world scenarios
+## 📸 Screenshots
 
-## 🎯 **Key Concepts Demonstrated**
+> **Note:** Query result screenshots and ER diagrams will be added soon. Run the SQL scripts to see the queries in action.
 
-### **SQL Fundamentals**
-- ✅ All basic SQL operations (SELECT, INSERT, UPDATE, DELETE)
-- ✅ Complex WHERE clauses with multiple conditions
-- ✅ All JOIN types (INNER, LEFT, RIGHT, FULL, CROSS)
-- ✅ Subqueries (correlated and non-correlated)
-- ✅ Set operations (UNION, INTERSECT, EXCEPT)
+## 🐛 Troubleshooting
 
-### **Advanced SQL Features**
-- ✅ Window functions (ROW_NUMBER, RANK, DENSE_RANK, NTILE)
-- ✅ Analytical functions (LAG, LEAD, FIRST_VALUE, LAST_VALUE)
-- ✅ Common Table Expressions (CTEs) and recursive queries
-- ✅ PIVOT and UNPIVOT operations
-- ✅ MERGE statements for complex data synchronization
+### Common Issues
 
-### **T-SQL Programming**
-- ✅ Variables, control flow (IF/ELSE, WHILE loops)
-- ✅ Stored procedures with parameters and return values
-- ✅ User-defined functions (scalar, table-valued, multi-statement)
-- ✅ Triggers (AFTER, INSTEAD OF, DDL triggers)
-- ✅ Error handling with TRY/CATCH blocks
-- ✅ Transaction management and isolation levels
+**Issue:** Cannot connect to SQL Server
 
-### **Performance & Optimization**
-- ✅ Index design and maintenance strategies
-- ✅ Execution plan analysis and optimization
-- ✅ Query hints and plan guides
-- ✅ Statistics creation and maintenance
-- ✅ Partitioning strategies for large tables
+**Solution:** Ensure SQL Server is running and you have the correct connection string. For local instances:
+```bash
+sqlcmd -S localhost -E
+# Or specify username/password
+sqlcmd -S localhost -U sa -P YourPassword
+```
 
-### **Enterprise Features**
-- ✅ Security implementations (RLS, DDM, TDE)
-- ✅ High availability configurations
-- ✅ Backup and recovery procedures
-- ✅ Database maintenance plans
-- ✅ Performance monitoring and tuning
+---
 
-## 🔍 **Real-World Applications**
+**Issue:** Python visualization script fails
 
-Each example is designed to solve actual business problems:
-- **E-commerce**: Product recommendations, sales analysis
-- **Finance**: Risk assessment, regulatory reporting
-- **Healthcare**: Patient analytics, outcome tracking
-- **Manufacturing**: Quality control, supply chain optimization
-- **Social Media**: User engagement, content analysis
+**Solution:** Install required dependencies:
+```bash
+pip install matplotlib pandas sqlalchemy pyodbc
+```
 
-## 📈 **Portfolio Highlights**
+---
 
-This collection demonstrates:
-- **Depth**: From basic queries to complex analytical solutions
-- **Breadth**: Coverage of all major SQL and T-SQL features
-- **Practicality**: Real-world business scenarios
-- **Performance**: Optimization techniques and best practices
-- **Enterprise**: Production-ready solutions and patterns
+**Issue:** Large SQL file (momaviz.sql) takes too long to load
 
-## 🤝 **Contributing**
+**Solution:** This is a 332KB file with extensive data. Be patient or import in smaller batches. Consider using bulk import for production scenarios.
 
-Contributions welcome! Please ensure:
-- Examples are well-documented with comments
-- Include expected output or results
-- Follow consistent formatting standards
-- Add appropriate test data if needed
+---
+
+**Issue:** Missing SQL client tools
+
+**Solution:** Install one of these:
+- **SQL Server Management Studio (SSMS)**: [Download](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+- **Azure Data Studio**: [Download](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
+- **DBeaver**: [Download](https://dbeaver.io/download/)
+
+---
+
+**Issue:** Schema creation fails
+
+**Solution:** Ensure you have CREATE DATABASE permissions and that no database with the same name exists.
+
+For additional help, please open an issue in the repository issue tracker.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add YourFeature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+### Enhancement Ideas
+- Complete the planned directories (02-08)
+- Add more real-world dataset examples
+- Create video tutorials for complex queries
+- Add PostgreSQL equivalent examples
+- Include MySQL syntax variations
+- Add comprehensive comments to existing queries
 
 ## 📄 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 📧 Contact & Support
+
+- **Author**: José Santiago Echevarria
+- **Issues**: Please report bugs via the repository issue tracker
+- **Educational Purpose**: SQL learning through practical examples with real datasets
+- **Dataset**: Museum of Modern Art (MoMA) collection data
+
 ---
 
-*Demonstrating comprehensive SQL mastery from fundamentals to enterprise-level database solutions.*
+*A growing SQL learning project focused on practical examples and data analysis.*
